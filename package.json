@@ -1,0 +1,23 @@
+{
+  "name": "react-basic-popover",
+  "version": "1.0.0",
+  "description": "\"a lightweight higher order component to render a simple popover message\"",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RussWard/react-basic-popover.git"
+  },
+  "keywords": [
+    "react",
+    "popover"
+  ],
+  "author": "Russ Ward <wardinacloud@me.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RussWard/react-basic-popover/issues"
+  },
+  "homepage": "https://github.com/RussWard/react-basic-popover#readme"
+}
