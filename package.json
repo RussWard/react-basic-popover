@@ -1,6 +1,6 @@
 {
   "name": "react-basic-popover",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "\"a lightweight higher order component to render a simple popover message\"",
   "main": "src/index.js",
   "scripts": {
