@@ -34,6 +34,7 @@ export default function(ComposedComponent) {
       node.setAttribute('style', `display: block; position: absolute; top: ${bottomOffset}px; left: ${rightOffset}px; size: fit-content; background-color: #fff; border: 1px solid; font-size: 60%;`);
       ReactDOM.findDOMNode(event.target).appendChild(node)
     }
+    
     render() {
       return <ComposedComponent {...this.props}/>
     }
