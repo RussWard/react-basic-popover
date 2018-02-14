@@ -27,10 +27,12 @@ export default function(ComposedComponent) {
     
     handleEnter(event) {
       let node = document.createElement('div')
+      let rightOffset = ReactDOM.findDOMNode(event.target).getBoundingClientRect().right - 30 + window.scrollX;
+      let bottomOffset = ReactDOM.findDOMNode(event.target).getBoundingClientRect().bottom - 10 + window.scrollY; 
       node.innerHTML = this.state.message
       node.setAttribute('id', 'popup')
-      node.setAttribute('style', 'display: block; position: absolute; bottom: -5px; right: -5px; size: fit-content; background-color: #fff; border: 1px solid;')
-      ReactDOM.findDOMNode(event.target).appendChild(node) 
+      node.setAttribute('style', `display: block; position: absolute; top: ${bottomOffset}px; left: ${rightOffset}px; size: fit-content; background-color: #fff; border: 1px solid; font-size: 60%;`);
+      ReactDOM.findDOMNode(event.target).appendChild(node)
     }
     render() {
       return <ComposedComponent {...this.props}/>
