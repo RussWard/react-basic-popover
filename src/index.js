@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-export default function(ComposedComponent) {
+export default (ComposedComponent) => {
   class PopOver extends React.Component {
     constructor(props) {
       super(props);
@@ -22,7 +22,7 @@ export default function(ComposedComponent) {
     }
 
     handleLeave(event) {
-      ReactDOM.findDOMNode(event.target).removeChild(document.getElementById('popup'))
+      ReactDOM.findDOMNode(event.target).removeChild(document.getElementById('popover'))
     }
     
     handleEnter(event) {
@@ -30,11 +30,11 @@ export default function(ComposedComponent) {
       let rightOffset = ReactDOM.findDOMNode(event.target).getBoundingClientRect().right - 30 + window.scrollX;
       let bottomOffset = ReactDOM.findDOMNode(event.target).getBoundingClientRect().bottom - 10 + window.scrollY; 
       node.innerHTML = this.state.message
-      node.setAttribute('id', 'popup')
+      node.setAttribute('id', 'popover')
       node.setAttribute('style', `display: block; position: absolute; top: ${bottomOffset}px; left: ${rightOffset}px; size: fit-content; background-color: #fff; border: 1px solid; font-size: 60%;`);
       ReactDOM.findDOMNode(event.target).appendChild(node)
     }
-    
+
     render() {
       return <ComposedComponent {...this.props}/>
     }
